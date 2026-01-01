@@ -5,7 +5,7 @@
 ### Prerequisites
 
 - Docker and Docker Compose installed
-- Server with ports 80 and 3001 available
+- Server with ports 80 and 8000 available
 
 ### Steps
 
@@ -32,7 +32,7 @@
 4. **Access the app**
 
    - Frontend: http://your-server-ip
-   - Backend API: http://your-server-ip:3001/api
+   - Backend API: http://your-server-ip:8000/api
 
 5. **View logs**
 
@@ -63,7 +63,7 @@
    - **Plan**: Free
 5. Add Environment Variables:
    - `JWT_SECRET`: `your-secret-key-here`
-   - `PORT`: `3001`
+   - `PORT`: `8000`
    - `NODE_ENV`: `production`
 6. Click **Create Web Service**
 7. Copy the service URL (e.g., `https://number-discussions-api.onrender.com`)
@@ -158,12 +158,12 @@ docker-compose up --build
 ### Backend
 
 - `JWT_SECRET`: Secret key for JWT tokens (required)
-- `PORT`: Server port (default: 3001)
+- `PORT`: Server port (default: 8000)
 - `NODE_ENV`: Environment mode (production/development)
 
 ### Frontend
 
-- `VITE_API_URL`: Backend API URL (e.g., http://localhost:3001/api)
+- `VITE_API_URL`: Backend API URL (e.g., http://localhost:8000/api)
 
 ---
 
@@ -179,7 +179,7 @@ docker-compose up --build
 
 - Ensure `VITE_API_URL` is set correctly
 - Check CORS settings in backend
-- Verify backend is running: `curl http://localhost:3001/api/health`
+- Verify backend is running: `curl http://localhost:8000/api/health`
 
 ### Database Issues
 

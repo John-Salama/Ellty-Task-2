@@ -30,7 +30,7 @@ A full-stack application where people communicate through numbers. Users can sta
 docker-compose up --build
 
 # Frontend: http://localhost:5173
-# Backend:  http://localhost:3001
+# Backend:  http://localhost:8000
 ```
 
 ### Manual Setup
@@ -86,7 +86,7 @@ npm run test:coverage # Run tests with coverage report
 4. Start command: `npm start`
 5. Set environment variables:
    - `JWT_SECRET=your-secure-secret`
-   - `PORT=3001`
+   - `PORT=8000`
 
 ## API Endpoints
 

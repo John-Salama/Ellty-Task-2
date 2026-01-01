@@ -4,9 +4,9 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     ports:
-      - "3001:3001"
+      - "8000:8000"
     environment:
-      - PORT=3001
+      - PORT=8000
       - JWT_SECRET=${JWT_SECRET:-change-this-secret-in-production}
       - NODE_ENV=production
     volumes:
@@ -20,7 +20,7 @@ services:
     ports:
       - "80:80"
     environment:
-      - VITE_API_URL=${VITE_API_URL:-http://localhost:3001/api}
+      - VITE_API_URL=${VITE_API_URL:-http://localhost:8000/api}
     depends_on:
       - backend
     restart: unless-stopped
